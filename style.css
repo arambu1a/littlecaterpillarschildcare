@@ -1,0 +1,320 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+/*Custom Property Names - defined globally(custom variables) */
+:root{
+        --orange:#f9ba60;
+        --pink:#e9768f;
+        --black:#1d1c1c;
+        --white:#fff;
+        --light-color:#666;
+        --box-shadow:0 .5rem 1.5rem rgba(0,0,0,.1);
+}
+
+*{
+    font-family: 'Poppins', sans-serif;
+    margin: 0; padding: 0;
+    box-sizing: border-box;
+    outline: none; border: none;
+    text-decoration: none;
+    text-transform: capitalize;
+    transition: all .2s linear; /*Changes in its properties will animate smoothly over 0.2s with constant(linear speed)*/
+}
+
+html{
+    font-size: 62.5%;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+
+section{
+    padding: 3rem 7%;
+
+}
+
+.heading{
+    font-size: 4rem;
+    color: var(--black);
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: bolder;
+    margin-bottom: 6rem;
+}
+
+.heading span{
+    color: var(--orange);
+    text-transform: uppercase;
+}
+
+.btn{
+    font-size: 1.7rem;
+    margin-top: 1rem;
+    display: inline-block;
+    padding: .8rem 3rem;
+    border-radius: .5rem;
+    border: .2rem solid var(--orange);
+    color: var(--orange);
+    background: none;
+}
+
+.btn:hover{
+    color: var(--orange);
+    background-color: var(--white);
+
+}
+
+/*Header*/
+
+.header{
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2rem 9%;
+    background: var(--white);
+    box-shadow: var(--box-shadow);
+    cursor: pointer;
+}
+
+.header .logo{
+    color: var(--black);
+    font-weight: bolder;
+    font-size: 2.5rem;
+}
+
+.header .logo img{
+    width: 16rem;
+    height: auto;
+    background-color: transparent;
+}
+
+.header .navbar a{
+    font-size: 1.7rem;
+    margin: 0 1rem;
+    color: var(--black);
+}
+
+.header .navbar a:hover,
+.header .icons div:hover{
+    color: var(--orange);
+
+}
+
+.header .icons div{
+    font-size: 2.5rem;
+    margin-left: 1.7rem;
+    color: var(--black);
+    cursor: pointer;
+}
+
+#menu-btn{
+    display: none;
+}
+
+.header .login-form{
+    position: absolute;
+    top: 110%; right: -110%;
+    width: 35rem;
+    box-shadow: var(--box-shadow);
+    padding: 2rem;
+    border-radius: .5rem;
+    background-color: var(--white);
+    text-align: center;
+}
+
+.header .login-form.active{
+    right: 2rem;
+    transition: .4s linear;
+}
+
+.header .login-form h3{
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    color: var(--black);
+}
+
+.header .login-form .box{
+    width: 100%;
+    margin: .7rem 0;
+    background: #eee;
+    border-radius: .5rem;
+    padding: 1rem;
+    font-size: 1.6rem;
+    color: var(--black);
+    text-transform: capitalize;
+}
+
+.header.login-form p{
+    font-size: 1.4rem;
+    padding: .5rem 0;
+    color: var(--light-color);
+}
+
+.header .login-form p a{
+    color: var(--orange);
+    text-decoration: underline;
+}
+
+/*Header Ends*/
+/*Home Section Starts */
+.home{
+    min-height: 100vh;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    align-items: center;
+    position: relative;
+}
+
+.home .content{
+    flex: 1 1 40rem;
+    padding-top: 6.5rem;
+}
+
+.home .content h3{
+    font-size: 6rem;
+    color: var(--black);
+}
+
+.home .content h3 span{
+    color: var(--orange);
+}
+
+.home .content p{
+    font-size: 1.7rem;
+    color: var(--light-color);
+    line-height: 1.8;
+    padding: 1rem 0;
+
+}
+
+.home .image{
+    flex: 1 1 40rem;
+}
+
+.home .image img{
+    width: 100%;
+    padding: 4rem;
+    padding-top: 5rem;
+}
+
+.custom-shape-divider-bottom-1736931180 {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 19vh;
+    overflow: hidden;
+    line-height: 0;
+}
+
+.custom-shape-divider-bottom-1736931180 svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 110%;
+    transform: rotateY(180deg);
+}
+
+.custom-shape-divider-bottom-1736931180 .shape-fill {
+    fill: var(--pink);
+}
+
+/*Home Section Ends*/
+
+/*About Us*/
+
+.about{
+    background: var(--pink);
+}
+
+.about .row{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+.about .row .image{
+    flex: 1 1 50rem;
+}
+
+.about .row .image img{
+    width: 100%;
+    height: 100%;
+}
+
+.about .row .content{
+    flex: 1 1 40rem;
+}
+
+.about .row .content h3{
+    font-size: 3.5rem;
+    color: var(--white);
+    line-height: 1.5;
+}
+
+.about .row .content p{
+    font-size: 1.4rem;
+    color: var(--white);
+    padding: 1rem 0;
+    line-height: 2;
+}
+
+/*About Us*/
+
+/*Resources*/
+
+.resources .box-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+    gap: 1.5rem;
+}
+
+.resources .box-container .box{
+    background: var(--white);
+    border-radius: 2rem;
+    box-shadow: var(--box-shadow);
+    outline: .1rem solid rgba(0,0,0,.1);
+    outline-offset: -1rem;
+    overflow: hidden;
+}
+
+/**/
+.resources .box-container .box:nth-child(odd){
+    background: var(--pink);
+} 
+/*grabbing the odd number 'box' and making background pink*/
+
+/**/
+.resources .box-container .box:nth-child(even) h3{
+    color: var(--black);
+}
+
+.resources .box-container .box:nth-child(even) p{
+    color: var(--black);
+}
+/* grabbing the even number 'box' and making the font black since background still white*/
+
+
+
+.resources .box-container .box h3{
+    font-size: 2.5rem;
+    color: var(--white);
+    line-height: 1.0;
+    padding-top: 3rem;
+    padding-left: 2rem;
+}
+
+.resources .box-container .box p{
+    font-size: 1.5rem;
+    line-height: 1.0;
+    color: var(--white);
+    padding: 1rem 2rem;
+}
+
+.resources .box-container .box img{
+    width: 100%;
+    height: 65%;
+}
